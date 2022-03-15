@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMaker", "MovieMaker\MovieMaker.csproj", "{D6A77495-BD68-4397-AD90-7EB14BDDE427}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMakerClassLibrary", "MovieMakerClassLibrary\MovieMakerClassLibrary.csproj", "{D529402C-627E-4ADA-BEF4-5D6606BEF4ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6A77495-BD68-4397-AD90-7EB14BDDE427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A77495-BD68-4397-AD90-7EB14BDDE427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A77495-BD68-4397-AD90-7EB14BDDE427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6A77495-BD68-4397-AD90-7EB14BDDE427}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D529402C-627E-4ADA-BEF4-5D6606BEF4ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D529402C-627E-4ADA-BEF4-5D6606BEF4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D529402C-627E-4ADA-BEF4-5D6606BEF4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D529402C-627E-4ADA-BEF4-5D6606BEF4ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD87BB0B-6FE1-4356-91B4-99BFE6312F23}
+	EndGlobalSection
+EndGlobal
