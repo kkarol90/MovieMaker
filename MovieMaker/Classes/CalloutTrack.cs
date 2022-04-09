@@ -11,6 +11,7 @@ namespace MovieMaker.Classes
         public Bitmap Image => throw new System.NotImplementedException();
 
         public double EndPoint { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
         public double Location { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
         public double Duration => throw new System.NotImplementedException();

@@ -11,6 +11,7 @@ namespace MovieMaker.Classes
     internal class TrackCreator
     {
         static TrackCreator instance;
+
         private TrackCreator()
         {
             // It is Singeltone

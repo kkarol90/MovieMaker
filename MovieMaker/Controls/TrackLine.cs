@@ -16,12 +16,15 @@ namespace MovieMaker
     public partial class TrackLine : UserControl
     {
         public static readonly double LastPointOffset = 300;
-        public static EventHandler LastPointChange;
-        static Panel monitor;
-        static double fullLength;
-        TrackControl actTrack;
+        public static EventHandler LastPointChange;        
+        private static double fullLength;
+        private static Panel monitor;
+        private TrackControl actTrack;       
 
         public static Action FullLengthChange;
+
+        private List<TrackControl> Tracks { get; set; }
+
         public static double FullLength
         {
             get => fullLength;
@@ -31,7 +34,7 @@ namespace MovieMaker
                 FullLengthChange?.Invoke();
             }
         }
-        List<TrackControl> Tracks { get; set; }
+        
         public double EndPoint { get; private set; }
 
         static TrackLine()
@@ -39,6 +42,7 @@ namespace MovieMaker
             monitor = new Panel();
             FullLength = 1000;
         }
+
         public TrackLine()
         {
             InitializeComponent();
@@ -79,6 +83,7 @@ namespace MovieMaker
             if (CheckLastPoint()) OnLastPointChange(EventArgs.Empty);
             return isAdded;
         }
+
         internal void RemoveTrack(TrackControl trackControl)
         {
             Tracks.Remove(trackControl);

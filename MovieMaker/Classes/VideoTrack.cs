@@ -15,17 +15,28 @@ namespace MovieMaker.Classes
         Mat matrix;
         double startPoint;
         double endPoint;
-        double lastReadFrame = -2;
+        double lastReadFrame;
 
         public VideoTrack(double startPoint, VideoCapture cap)
         {
-            matrix = new Mat();
             this.cap = cap;
-            cap.Read(matrix);
             this.startPoint = startPoint;
+            lastReadFrame = -2;
+            matrix = new Mat();            
+            cap.Read(matrix);           
             Location = startPoint;
             EndPoint = startPoint + LengthInFrames;
         }
+
+        public double Location { get; set; }
+
+        public double LengthInFrames { get => Cap.Get(Emgu.CV.CvEnum.CapProp.FrameCount); }
+
+        public double Duration => EndPoint - StartPoint;
+
+        public VideoCapture Cap { get => cap; set => cap = value; }
+
+        public Bitmap Image { get => matrix.ToBitmap(); }
 
         public double StartPoint
         {
@@ -44,14 +55,7 @@ namespace MovieMaker.Classes
                 if (StartPoint < value && value <= StartPoint + LengthInFrames)
                     endPoint = value;
             }
-        }
-        public double Location { get; set; }
-        public double LengthInFrames { get => Cap.Get(Emgu.CV.CvEnum.CapProp.FrameCount); }
-        public double Duration => EndPoint - StartPoint;
-        public VideoCapture Cap { get => cap; set => cap = value; }
-        public Bitmap Image { get => matrix.ToBitmap(); }
-
-        public bool IsImgCaught { get; }
+        }       
 
         public bool Read(double frame)
         {

@@ -49,7 +49,7 @@
     <Compile Include="Classes\AddTrackComm.cs" />
     <Compile Include="Classes\CalloutTrack.cs" />
     <Compile Include="Classes\ICommand.cs" />
-    <Compile Include="Classes\ImageTrack.cs" />
+    <Compile Include="Classes\PhotoTrack.cs" />
     <Compile Include="Classes\InstructionExecutor.cs" />
     <Compile Include="Classes\ITrack.cs" />
     <Compile Include="Classes\VideoTrack.cs" />

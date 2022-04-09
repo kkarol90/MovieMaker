@@ -17,7 +17,6 @@ namespace MovieMaker
 {
     public partial class Form1 : Form
     {
-        public bool IsRun;
         private List<TrackLine> trackLineList = new List<TrackLine>();
 
         public Form1()
@@ -50,7 +49,6 @@ namespace MovieMaker
         {
             TrackLine tLine = new TrackLine();
             trackLineList.Add(tLine);
-            //flp_tracks.Controls.Add(tLine);
         }
 
         private VideoCapture GetVideoCaptureFromFile()
@@ -66,40 +64,6 @@ namespace MovieMaker
             else return null;
         }
 
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private async void btn_start_Click(object sender, EventArgs e)
-        {
-            //if (trackLineList[0].Tracks[0].Cap == null) return;
-            //try
-            //{
-            //    IsRun = true;
-            //    while (IsRun)
-            //    {
-            //        trackLineList[0].Tracks[0].Read();
-            //        if (!trackLineList[0].Tracks[0].Matrix.IsEmpty)
-            //        {                     
-            //            trackLineList[0].Tracks[0].Box.Image = trackLineList[0].Tracks[0].Matrix.ToBitmap();
-            //            int fps = (int)trackLineList[0].Tracks[0].Cap.Get(Emgu.CV.CvEnum.CapProp.Fps);
-            //            await Task.Delay(1000/fps);
-            //            tb_test2.Text = trackLineList[0].Tracks[0].Cap.Get(Emgu.CV.CvEnum.CapProp.PosFrames).ToString();
-            //        }
-            //        else break;
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            //    throw;
-            //}          
-        }
-
-        private void btn_stop_Click(object sender, EventArgs e)
-        {
-            IsRun = false;
-        }
 
         private void btn_undo_Click(object sender, EventArgs e)
         {

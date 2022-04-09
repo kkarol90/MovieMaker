@@ -2,7 +2,7 @@
 
 namespace MovieMaker.Classes
 {
-    internal class ImageTrack : ITrack
+    internal class PhotoTrack : ITrack
     {
         public double StartPoint { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
