@@ -30,10 +30,8 @@
         {
             this.panel_bottom = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.tb_test2 = new System.Windows.Forms.TextBox();
             this.tb_test1 = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel_monitor = new System.Windows.Forms.Panel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.panel_buttons = new System.Windows.Forms.Panel();
@@ -41,14 +39,17 @@
             this.btn_undo = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_load = new System.Windows.Forms.Button();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.SuspendLayout();
             this.panel_buttons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_bottom
@@ -68,51 +69,31 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.panel4);
-            this.splitContainer1.Panel1.Controls.Add(this.panel3);
+            this.splitContainer1.Panel1.Controls.Add(this.splitContainer3);
             this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
             this.splitContainer1.Panel1.Controls.Add(this.panel_buttons);
             this.splitContainer1.Size = new System.Drawing.Size(992, 631);
             this.splitContainer1.SplitterDistance = 428;
             this.splitContainer1.TabIndex = 2;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.tb_test2);
-            this.panel4.Controls.Add(this.tb_test1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(792, 41);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 387);
-            this.panel4.TabIndex = 15;
-            // 
             // tb_test2
             // 
-            this.tb_test2.Location = new System.Drawing.Point(4, 33);
+            this.tb_test2.Location = new System.Drawing.Point(11, 32);
             this.tb_test2.Name = "tb_test2";
-            this.tb_test2.Size = new System.Drawing.Size(196, 20);
+            this.tb_test2.Size = new System.Drawing.Size(136, 20);
             this.tb_test2.TabIndex = 1;
             // 
             // tb_test1
             // 
-            this.tb_test1.Location = new System.Drawing.Point(4, 7);
+            this.tb_test1.Location = new System.Drawing.Point(11, 6);
             this.tb_test1.Name = "tb_test1";
-            this.tb_test1.Size = new System.Drawing.Size(196, 20);
+            this.tb_test1.Size = new System.Drawing.Size(136, 20);
             this.tb_test1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel_monitor);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(166, 41);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(826, 387);
-            this.panel3.TabIndex = 14;
             // 
             // panel_monitor
             // 
             this.panel_monitor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_monitor.Location = new System.Drawing.Point(20, 17);
+            this.panel_monitor.Location = new System.Drawing.Point(35, 6);
             this.panel_monitor.Name = "panel_monitor";
             this.panel_monitor.Size = new System.Drawing.Size(590, 353);
             this.panel_monitor.TabIndex = 5;
@@ -145,7 +126,7 @@
             this.btn_rendo.Name = "btn_rendo";
             this.btn_rendo.Size = new System.Drawing.Size(51, 41);
             this.btn_rendo.TabIndex = 3;
-            this.btn_rendo.Text = "Rendo";
+            this.btn_rendo.Text = "Retry";
             this.btn_rendo.UseVisualStyleBackColor = true;
             this.btn_rendo.Click += new System.EventHandler(this.btn_rendo_Click);
             // 
@@ -181,6 +162,24 @@
             this.btn_load.UseVisualStyleBackColor = true;
             this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
             // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(166, 41);
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.panel_monitor);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.tb_test2);
+            this.splitContainer3.Panel2.Controls.Add(this.tb_test1);
+            this.splitContainer3.Size = new System.Drawing.Size(826, 387);
+            this.splitContainer3.SplitterDistance = 663;
+            this.splitContainer3.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,12 +192,14 @@
             this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.panel_buttons.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            this.splitContainer3.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -207,10 +208,8 @@
 
         private System.Windows.Forms.Panel panel_bottom;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox tb_test2;
         private System.Windows.Forms.TextBox tb_test1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel_monitor;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Panel panel_buttons;
@@ -218,6 +217,7 @@
         private System.Windows.Forms.Button btn_load;
         private System.Windows.Forms.Button btn_rendo;
         private System.Windows.Forms.Button btn_undo;
+        private System.Windows.Forms.SplitContainer splitContainer3;
     }
 }
 

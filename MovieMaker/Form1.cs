@@ -43,8 +43,8 @@ namespace MovieMaker
                     MovieBuilder.GetMovieBuilder().AddTrackControlToLine(lineNumber, trackControl, startPos);
                 }
             }
-
         }
+
         private void btn_addLine_Click(object sender, EventArgs e)
         {
             TrackLine tLine = new TrackLine();

@@ -190,5 +190,11 @@ namespace MovieMaker.Controls
         {
             pause = true;
         }
+
+        private void btn_start_Click(object sender, EventArgs e)
+        {
+            IndicatorPosition = 0;
+            pause = true;
+        }
     }
 }
