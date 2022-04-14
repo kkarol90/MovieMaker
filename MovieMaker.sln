@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMaker", "MovieMaker\Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMakerClassLibrary", "MovieMakerClassLibrary\MovieMakerClassLibrary.csproj", "{D529402C-627E-4ADA-BEF4-5D6606BEF4ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMakerTests", "MovieMakerTests\MovieMakerTests.csproj", "{ECEC8B9C-15C8-4489-A5AA-A51213D4CD4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D529402C-627E-4ADA-BEF4-5D6606BEF4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D529402C-627E-4ADA-BEF4-5D6606BEF4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D529402C-627E-4ADA-BEF4-5D6606BEF4ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECEC8B9C-15C8-4489-A5AA-A51213D4CD4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECEC8B9C-15C8-4489-A5AA-A51213D4CD4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECEC8B9C-15C8-4489-A5AA-A51213D4CD4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECEC8B9C-15C8-4489-A5AA-A51213D4CD4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

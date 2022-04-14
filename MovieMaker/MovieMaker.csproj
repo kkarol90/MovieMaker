@@ -48,11 +48,19 @@
   <ItemGroup>
     <Compile Include="Classes\AddTrackComm.cs" />
     <Compile Include="Classes\CalloutTrack.cs" />
+    <Compile Include="Classes\FileType.cs" />
     <Compile Include="Classes\ICommand.cs" />
+    <Compile Include="Classes\MediaFile.cs" />
     <Compile Include="Classes\PhotoTrack.cs" />
     <Compile Include="Classes\InstructionExecutor.cs" />
     <Compile Include="Classes\ITrack.cs" />
     <Compile Include="Classes\VideoTrack.cs" />
+    <Compile Include="Controls\MediaOrganizer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MediaOrganizer.Designer.cs">
+      <DependentUpon>MediaOrganizer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MovieBuilder.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,6 +88,9 @@
       <DependentUpon>TrackLine.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\TrackCreator.cs" />
+    <EmbeddedResource Include="Controls\MediaOrganizer.resx">
+      <DependentUpon>MediaOrganizer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\MovieBuilder.resx">
       <DependentUpon>MovieBuilder.cs</DependentUpon>
     </EmbeddedResource>

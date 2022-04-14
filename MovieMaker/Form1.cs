@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,8 @@ namespace MovieMaker
     public partial class Form1 : Form
     {
         private List<TrackLine> trackLineList = new List<TrackLine>();
+        private Dictionary<string, string> importedImage = new Dictionary<string, string>();
+        private Dictionary<string, string> importedVideo = new Dictionary<string, string>();
 
         public Form1()
         {
@@ -55,10 +58,22 @@ namespace MovieMaker
         {
             OpenFileDialog ofd = new OpenFileDialog();
             string path = "";
-            ofd.Filter = "Video Files |*.mp4";
+            ofd.Filter = "Video Files|*.mp4" + "|Image Files|*.jpg;*.png";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
+                Regex regImg = new Regex(@"\.png|\.jpg");
+                Regex regVideo = new Regex(@"\.mp4");
+                string name = ofd.SafeFileName;
                 path = ofd.FileName;
+                //if (regImg.IsMatch(name))
+                //{
+                //    importedImage.Add(path, name);
+                //}
+                //else if(regVideo.IsMatch(name))
+                //{
+                //    importedVideo.Add(path, name);
+                //}   
+                uc_mediaOrganizer.AddMedia(path);
                 return new VideoCapture(path);
             }
             else return null;
@@ -74,5 +89,6 @@ namespace MovieMaker
         {
             InstructionExecutor.Get().Retry();
         }
+
     }
 }
